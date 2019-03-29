@@ -18,6 +18,7 @@ from evennia import default_cmds
 from evennia.contrib.clothing import ClothedCharacterCmdSet
 from evennia.contrib.gendersub import SetGender
 from evennia.contrib.multidescer import CmdMultiDesc
+from evennia.contrib.dice import CmdDice
 
 class CharacterCmdSet(default_cmds.CharacterCmdSet):
     """
@@ -38,6 +39,7 @@ class CharacterCmdSet(default_cmds.CharacterCmdSet):
         self.add(ClothedCharacterCmdSet) #wear commands
         self.add(SetGender)
         self.add(CmdMultiDesc())
+        self.add(CmdDice)
 
 class AccountCmdSet(default_cmds.AccountCmdSet):
     """
