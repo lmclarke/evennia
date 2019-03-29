@@ -37,7 +37,7 @@ TELNET_PORTS = [3650]
 WEBSERVER_PORTS = [(3651, 3652)]
 WEBSOCKET_CLIENT_PORT = 3653
 AMP_PORT = 3654
-
+MULTISESSION_MODE=2
 ######################################################################
 # Settings given in secret_settings.py override those in this file.
 ######################################################################
