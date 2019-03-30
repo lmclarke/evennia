@@ -23,6 +23,8 @@ from evennia.contrib.extended_room import CmdExtendedDesc
 from evennia.contrib.extended_room import CmdGameTime
 from evennia.contrib.slow_exit import CmdSetSpeed
 from evennia.contrib.slow_exit import CmdStop
+from evennia.contrib.simpledoor import CmdOpen
+from evennia.contrib.simpledoor import CmdOpenCloseDoor
 
 
 class CharacterCmdSet(default_cmds.CharacterCmdSet):
@@ -49,6 +51,8 @@ class CharacterCmdSet(default_cmds.CharacterCmdSet):
         self.add(CmdGameTime)
         self.add(CmdSetSpeed)
         self.add(CmdStop)
+        self.add(CmdOpen)
+        self.add(CmdOpenCloseDoor)
 
 
 class AccountCmdSet(default_cmds.AccountCmdSet):
