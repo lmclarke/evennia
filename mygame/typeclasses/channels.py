@@ -58,4 +58,14 @@ class Channel(DefaultChannel):
         post_send_message(msg) - called just after message was sent to channel
 
     """
-    pass
+    def channel_prefix(self, msg=None, emit=False):
+        """
+        How the channel should prefix itself for users. Return a string.
+        """
+        # use color if defined
+        if self.db.colorstr:
+            return '%s[%s]{n ' % (self.db.colorstr, self.key)
+        # else default is whether it's private or not
+        if self.locks.get('listen').strip() != "listen:all()":
+            return '|y[%s]|n ' % self.key
+        return '|C[%s]|n ' % self.key
