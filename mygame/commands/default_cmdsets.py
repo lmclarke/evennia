@@ -25,6 +25,7 @@ from evennia.contrib.slow_exit import CmdSetSpeed
 from evennia.contrib.slow_exit import CmdStop
 from evennia.contrib.simpledoor import CmdOpen
 from evennia.contrib.simpledoor import CmdOpenCloseDoor
+from evennia.contrib.mail import CmdMail
 
 
 class CharacterCmdSet(default_cmds.CharacterCmdSet):
@@ -53,6 +54,7 @@ class CharacterCmdSet(default_cmds.CharacterCmdSet):
         self.add(CmdStop)
         self.add(CmdOpen)
         self.add(CmdOpenCloseDoor)
+        self.add(CmdMail)
 
 
 class AccountCmdSet(default_cmds.AccountCmdSet):
