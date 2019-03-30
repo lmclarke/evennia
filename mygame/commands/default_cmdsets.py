@@ -18,7 +18,12 @@ from evennia import default_cmds
 from evennia.contrib.clothing import ClothedCharacterCmdSet
 from evennia.contrib.gendersub import SetGender
 from evennia.contrib.multidescer import CmdMultiDesc
-from evennia.contrib.dice import CmdDice
+from evennia.contrib.extended_room import CmdExtendedLook
+from evennia.contrib.extended_room import CmdExtendedDesc
+from evennia.contrib.extended_room import CmdGameTime
+from evennia.contrib.slow_exit import CmdSetSpeed
+from evennia.contrib.slow_exit import CmdStop
+
 
 class CharacterCmdSet(default_cmds.CharacterCmdSet):
     """
@@ -39,7 +44,12 @@ class CharacterCmdSet(default_cmds.CharacterCmdSet):
         self.add(ClothedCharacterCmdSet) #wear commands
         self.add(SetGender)
         self.add(CmdMultiDesc())
-        self.add(CmdDice)
+        self.add(CmdExtendedLook)
+        self.add(CmdExtendedDesc)
+        self.add(CmdGameTime)
+        self.add(CmdSetSpeed)
+        self.add(CmdStop)
+
 
 class AccountCmdSet(default_cmds.AccountCmdSet):
     """

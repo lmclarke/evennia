@@ -9,12 +9,14 @@ from evennia import DefaultRoom
 from evennia.contrib.rpsystem import ContribRPRoom
 from collections import defaultdict
 from evennia.utils import list_to_string
+from evennia.contrib.extended_room import ExtendedRoom
+
 
 ROOM_NAME_COL = "|C"
 INDENT = "   "
 
 
-class Room(ContribRPRoom):
+class Room(ContribRPRoom, ExtendedRoom):
     """
     Rooms are like any Object, except their location is None
     (which is default). They also use basetype_setup() to

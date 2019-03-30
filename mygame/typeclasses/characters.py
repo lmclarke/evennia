@@ -12,6 +12,7 @@ from evennia.contrib.rpsystem import ContribRPCharacter
 from evennia.contrib.clothing import ClothedCharacter
 from evennia.contrib.gendersub import GenderCharacter
 
+
 class Character(ContribRPCharacter, ClothedCharacter, GenderCharacter):
     """
     The Character defaults to reimplementing some of base Object's hook methods with the

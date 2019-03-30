@@ -7,9 +7,10 @@ for allowing Characters to traverse the exit to its destination.
 
 """
 from evennia import DefaultExit
+from evennia.contrib.slow_exit import SlowExit
 
 
-class Exit(DefaultExit):
+class Exit(SlowExit):
     """
     Exits are connectors between rooms. Exits are normal Objects except
     they defines the `destination` property. It also does work in the
