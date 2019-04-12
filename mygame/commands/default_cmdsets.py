@@ -26,6 +26,7 @@ from evennia.contrib.slow_exit import CmdStop
 from evennia.contrib.simpledoor import CmdOpen
 from evennia.contrib.simpledoor import CmdOpenCloseDoor
 from evennia.contrib.mail import CmdMail
+from paxboards.commands import add_board_commands
 
 
 class CharacterCmdSet(default_cmds.CharacterCmdSet):
@@ -55,6 +56,7 @@ class CharacterCmdSet(default_cmds.CharacterCmdSet):
         self.add(CmdOpen)
         self.add(CmdOpenCloseDoor)
         self.add(CmdMail)
+        add_board_commands(self)
 
 
 class AccountCmdSet(default_cmds.AccountCmdSet):

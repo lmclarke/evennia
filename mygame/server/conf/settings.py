@@ -38,6 +38,7 @@ WEBSERVER_PORTS = [(3651, 3652)]
 WEBSOCKET_CLIENT_PORT = 3653
 AMP_PORT = 3654
 MULTISESSION_MODE=2
+INSTALLED_APPS += ('paxboards',)
 ######################################################################
 # Settings given in secret_settings.py override those in this file.
 ######################################################################
